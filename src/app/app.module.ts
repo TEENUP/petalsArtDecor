@@ -10,7 +10,7 @@ import { BaseComponent } from './base/base.component';
   declarations: [
     AppComponent,
     ParallaxDirective,
-    BaseComponent
+    BaseComponent,
   ],
   imports: [
     BrowserModule,

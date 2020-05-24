@@ -57,36 +57,7 @@ export class BaseComponent implements OnInit {
         }
     ]
 
-
-    navbarMenu = [
-        {
-            key: 'home',
-            value: 'Home',
-            redirectTo: '/home'
-        },
-        {
-            key: 'projects',
-            value: 'Projects',
-            redirectTo: '/home'
-        },
-        {
-            key: 'srvices',
-            value: 'Services',
-            redirectTo: '/home'
-        },
-        {
-            key: 'contactUs',
-            value: 'Contact Us',
-            redirectTo: '/home'
-        },
-        {
-            key: 'aboutUs',
-            value: 'About Us',
-            redirectTo: '/home'
-        },
-    ]
-
-
+    
     constructor() {
         // setInterval(() => {
         //     this.bgPos = this.bgPos - 0.15;

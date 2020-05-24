@@ -1,15 +1,3 @@
-<header class="header">
-    <img src="../../assets/logo-eps-svg.svg">
-    <nav>
-        <ul class="list-container">
-            <li *ngFor="let menu of navbarMenu">
-                {{menu.value}}
-            </li>
-        </ul>
-    </nav>
-</header>
-
-
 
 <section id="section-welcome" class="bg-loop bg-fit-height full-height" [ngStyle]="{'background-position': bgPosition}">
 </section>
@@ -30,28 +18,5 @@
         <div *ngFor="let item of ourProcess" class="circular-process">{{item.value}}</div>
     </div>
 </section>
-
-<footer>
-    <div class="footer-container">
-        <div>
-            <img src="../assets/logo-eps-svg.svg">
-            <p>
-                We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste
-                natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
-        </div>
-        <div>
-            LATEST NEWS
-        </div>
-        <div>
-            CONTACT US
-        </div>
-    </div>
-    <div class="copyright">
-        © Copyright 2020 - Petals Art Decor, worlds best Interior Designers
-    </div>
-    <a></a>
-</footer>
 
 <router-outlet></router-outlet>

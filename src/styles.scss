@@ -9,3 +9,62 @@ footer {
     background: #111;
     color: #ccc;
 }
+
+
+// header 
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header img {
+    width: 70px;
+}
+
+.list-container {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    float: right;
+}
+
+.list-container li {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+
+// Footer
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin: 10px;
+}
+
+.footer-container img {
+    width: 120px;
+}
+
+.footer-container div {
+    width: 33%;
+    margin: 5px;
+}
+
+.copyright {
+    background-color: #0b0b0b;
+    padding: 30px;
+}

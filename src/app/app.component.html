@@ -1,8 +1,41 @@
+<header class="header">
+    <img src="../../assets/logo-eps-svg.svg">
+    <nav>
+        <ul class="list-container">
+            <li *ngFor="let menu of navbarMenu" routerLink='{{menu.redirectTo}}'>
+                {{menu.value}}
+            </li>
+        </ul>
+    </nav>
+</header>
 
+<router-outlet></router-outlet>
+
+<footer>
+    <div class="footer-container">
+        <div>
+            <img src="../assets/logo-eps-svg.svg">
+            <p>
+                We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+        </div>
+        <div>
+            LATEST NEWS
+        </div>
+        <div>
+            CONTACT US
+        </div>
+    </div>
+    <div class="copyright">
+        © Copyright 2020 - Petals Art Decor, worlds best Interior Designers
+    </div>
+    <a></a>
+</footer>
 
 <!-- <div appParallax [ratio]="0.9" id="square"></div>
 <div appParallax [ratio]="0.5" id="circle"></div>
 <div appParallax [ratio]="0.9" id="rectangle"></div> -->
-<router-outlet></router-outlet>
 
 
