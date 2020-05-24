@@ -1,0 +1,126 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header img {
+    width: 70px;
+}
+
+.list-container {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    float: right;
+}
+
+.list-container li {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+#section-welcome {
+    height: 434px;
+    background: url(../../assets/bg-19.jpg) fixed center;
+}
+
+.bg-fit-height {
+    background-size: auto 100% !important;
+    background-attachment: scroll !important;
+}
+
+section {
+    padding: 90px 0 90px 0;
+}
+
+body {
+    margin: 0 !important;
+}
+
+
+// section what we do
+.what-we-do {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 438px;
+    background-color: rgb(33, 34, 37);
+}
+
+.left-what-we-do {
+    width: 50%;
+    text-align: center;
+}
+.right-what-we-do {
+    width: 50%;
+}
+
+.right-what-we-do img {
+    width: 100%;
+    height: 100%;
+}
+
+// section our purpose
+
+.our-process-section {
+    background: url(../../assets/bg-2.jpg) fixed center;
+    background-size: auto 100% !important;
+    background-attachment: scroll !important;
+    height: 434px;
+}
+.our-process {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 100%;
+    margin: 134px 0;
+}
+.circular-process {
+    background-color: lavenderblush;
+    width: 15%;
+    height: calc(100vw/6.66);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    white-space: pre-wrap;
+    padding: 15px;
+    margin: 10px;
+}
+
+
+// Footer
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin: 10px;
+}
+
+.footer-container img {
+    width: 120px;
+}
+
+.footer-container div {
+    width: 33%;
+    margin: 5px;
+}
+
+.copyright {
+    background-color: #0b0b0b;
+    padding: 30px;
+}
