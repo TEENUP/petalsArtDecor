@@ -1,0 +1,13 @@
+
+<section>
+    <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection}">
+        <div class="left-what-we-do">
+            <h2>{{item.heading}}</h2>
+        </div>
+        <div class="right-what-we-do">
+            <img src="../../assets/{{item.image}}">
+        </div>
+    </div>
+</section>
+
+<router-outlet></router-outlet>

@@ -8,24 +8,32 @@
         </ul>
     </nav>
 </header>
-
-<router-outlet></router-outlet>
-
-<footer>
+<div style="position: relative; top: -60px;">
+<div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
+    <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
+    <div class="route-content">
+        <div class="route-heading">{{activeRoute[currentActiveRoute].name}}</div>
+        <div class="route-link">Home / {{activeRoute[currentActiveRoute].name}}</div>
+    </div>
+</div>
+    <router-outlet></router-outlet>
+    
+    <footer>
     <div class="footer-container">
         <div>
             <img src="../assets/logo-eps-svg.svg">
-            <p>
+            <p align="justify">
                 We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste
                 natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
                 inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
         </div>
-        <div>
-            LATEST NEWS
-        </div>
-        <div>
-            CONTACT US
+        <div class="footer-contact">
+            <h2 class="contact-heading text-color">CONTACT US</h2>
+            <p>C-11/110 &nbsp; Sector-3 Rohini Delhi-110085</p>
+            <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
+            <p><span class="text-color" style="padding-right: 19px;">Email:</span> contact@petalsartdecor.com</p>
+            <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
         </div>
     </div>
     <div class="copyright">
@@ -33,6 +41,7 @@
     </div>
     <a></a>
 </footer>
+</div>
 
 <!-- <div appParallax [ratio]="0.9" id="square"></div>
 <div appParallax [ratio]="0.5" id="circle"></div>

@@ -57,6 +57,25 @@ export class BaseComponent implements OnInit {
         }
     ]
 
+    experienceWithUs = [
+        {
+            heading: 'INTERIOR EXPERTISE'
+        },
+        {
+            heading: 'FREE CONSULTATION',
+            centre: true
+        },
+        {
+            heading: 'AFFORDABLE PRICE'
+        },
+        {
+            heading: 'GUARANTEED WORKS'
+        },
+        {
+            heading: '24 / 7 SUPPORT'
+        }
+    ]
+
     
     constructor() {
         // setInterval(() => {

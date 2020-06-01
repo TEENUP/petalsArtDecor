@@ -1,4 +1,33 @@
 
+.route-bg {  
+    position: relative;
+    .route-content {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .route-heading {
+        font-size: 40px;
+        text-transform: uppercase;
+        position: relative;
+        left: 50px;
+    }   
+    .route-link {
+        position: relative;
+        right: 50px;
+    }
+
+}
+
+.route-bg img {
+    width: 100%;
+    // height: 200px;
+}
+
 
 
 
