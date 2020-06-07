@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,39 +7,67 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- 
-  
+
+
 
   navbarMenu = [
     {
-        key: 'home',
-        value: 'Home',
-        redirectTo: '/home'
+      key: 'home',
+      value: 'Home',
+      redirectTo: '/home'
     },
     {
-        key: 'projects',
-        value: 'Projects',
-        redirectTo: '/projects'
+      key: 'aboutUs',
+      value: 'About Us',
+      redirectTo: '/about-us'
     },
     {
-        key: 'services',
-        value: 'Services',
-        redirectTo: '/services'
+      key: 'projects',
+      value: 'Projects',
+      redirectTo: '/projects'
     },
     {
-        key: 'contactUs',
-        value: 'Contact Us',
-        redirectTo: '/contact-us'
+      key: 'services',
+      value: 'Services',
+      redirectTo: '/services'
     },
     {
-        key: 'aboutUs',
-        value: 'About Us',
-        redirectTo: '/about-us'
+      key: 'contactUs',
+      value: 'Contact Us',
+      redirectTo: '/contact-us'
     },
-]
+  ]
 
-
-
-  constructor() {
+  activeRoute = {
+    '/about-us': {
+      image: '10.jpg',
+      name: 'About Us'
+    },
+    '/projects': {
+      image: '6.jpg',
+      name: 'Projects'
+    },
+    '/services': {
+      image: '5.jpg',
+      name: 'Services'
+    },
+    '/contact-us': {
+      image: '7.jpg',
+      name: 'Contact Us'
+    }
   }
+  currentActiveRoute:any;
+  
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd) {
+        this.currentActiveRoute = event.url;
+      }
+    });
+  }
+
+
 }

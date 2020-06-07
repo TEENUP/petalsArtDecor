@@ -7,7 +7,17 @@ import { Component } from "@angular/core";
 })
 
 export class AboutUsComponent {
-
+    team = [
+        {
+          image: ''
+        },
+        {
+          image: ''
+        },
+        {
+          image: ''
+        }
+      ]
     constructor() {
 
     }
