@@ -1,7 +1,7 @@
 
 
 #section-welcome {
-    height: 434px;
+    height: 555px;
     background: url(../../assets/bg-19.jpg) fixed center;
 }
 
@@ -23,16 +23,22 @@ body {
 
 .our-process-section {
     background: url(../../assets/bg-2.jpg) fixed center;
-    background-size: auto 100% !important;
+    background-size: cover;
     background-attachment: scroll !important;
     height: 434px;
+    background-repeat: no-repeat;
+
+    h2 {
+        text-align: center;
+    }
 }
 .our-process {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
     height: 100%;
-    margin: 134px 0;
+    // margin: 134px 0;
+    align-items: center;
 }
 .circular-process {
     background-color: lavenderblush;
@@ -49,6 +55,13 @@ body {
     margin: 10px;
 }
 
+// testimonials 
+.testimonials-section {
+    h2 {
+        text-align: center;
+    }
+}
+
 // experience
 .experience-container {
     display: flex;
@@ -60,6 +73,13 @@ body {
 
 .experience-item {
     width: 28%;
+    display: flex;
+    align-items: center;
+    .icon {
+        padding: 10px 20px 10px 0;
+        font-size: 34px;
+        color: #df9f91;
+    }
 }
 
 .experience-item-centre {

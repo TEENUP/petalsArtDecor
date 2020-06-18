@@ -9,42 +9,62 @@
     </nav>
 </header>
 <div style="position: relative; top: -60px;">
-<div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
-    <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
-    <div class="route-content">
-        <div class="route-heading">{{activeRoute[currentActiveRoute].name}}</div>
-        <div class="route-link">Home / {{activeRoute[currentActiveRoute].name}}</div>
+    <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
+        <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
+        <div class="route-content">
+            <div class="route-heading">{{activeRoute[currentActiveRoute].name}}</div>
+            <div class="route-link"><a [routerLink]="['home']" class="text-color" style="text-decoration: unset;">Home</a> / {{activeRoute[currentActiveRoute].name}}</div>
+        </div>
     </div>
-</div>
     <router-outlet></router-outlet>
-    
+
     <footer>
-    <div class="footer-container">
-        <div>
-            <img src="../assets/logo-eps-svg.svg">
-            <p align="justify">
-                We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste
-                natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+        <div class="quoatation-container bg-color">
+            <p>We love to make you more comfort on your home</p> <a>GET QUOTATION</a>
         </div>
-        <div class="footer-contact">
-            <h2 class="contact-heading text-color">CONTACT US</h2>
-            <p>C-11/110 &nbsp; Sector-3 Rohini Delhi-110085</p>
-            <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
-            <p><span class="text-color" style="padding-right: 19px;">Email:</span> contact@petalsartdecor.com</p>
-            <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
+        <div class="footer-container">
+            <div>
+                <img src="../assets/logo-eps-svg.svg">
+                <p align="justify">
+                    We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis
+                    iste
+                    natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                    illo
+                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <h2 class="contact-heading text-color">CONTACT US</h2>
+                <p>C-11/110 &nbsp; Sector-3 Rohini Delhi-110085</p>
+                <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
+                <p><span class="text-color" style="padding-right: 19px;">Email:</span> contact@petalsartdecor.com</p>
+                <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
+            </div>
         </div>
+        <div class="copyright">
+            © Copyright 2020 - Petals Art Decor, worlds best <span class="text-color"> Interior Designers</span>
+            <div class="social-icons">
+
+                <a>
+                    <i class="fa fa-facebook fa-lg text-color"></i>
+                </a>
+                <a>
+                    <i class="fa fa-instagram fa-lg text-color"></i>
+                </a>
+                <a>
+                    <i class="fa fa-whatsapp fa-lg text-color"></i>
+                </a>
+            </div>
+        </div>
+        <a></a>
+    </footer>
+    <div class="back-to-top bg-color">
+        <a>
+            <i class="fa fa-angle-up fa-lg"></i>
+        </a>
     </div>
-    <div class="copyright">
-        © Copyright 2020 - Petals Art Decor, worlds best Interior Designers
-    </div>
-    <a></a>
-</footer>
 </div>
 
 <!-- <div appParallax [ratio]="0.9" id="square"></div>
 <div appParallax [ratio]="0.5" id="circle"></div>
 <div appParallax [ratio]="0.9" id="rectangle"></div> -->
-
-
