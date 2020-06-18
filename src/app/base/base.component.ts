@@ -59,20 +59,25 @@ export class BaseComponent implements OnInit {
 
     experienceWithUs = [
         {
-            heading: 'INTERIOR EXPERTISE'
+            heading: 'INTERIOR EXPERTISE',
+            faIcon: ''
         },
         {
             heading: 'FREE CONSULTATION',
-            centre: true
+            centre: true,
+            faIcon: 'fa-comments-o'
         },
         {
-            heading: 'AFFORDABLE PRICE'
+            heading: 'AFFORDABLE PRICE',
+            faIcon: 'fa-inr'
         },
         {
-            heading: 'GUARANTEED WORKS'
+            heading: 'GUARANTEED WORKS',
+            faIcon: ''
         },
         {
-            heading: '24 / 7 SUPPORT'
+            heading: '24 / 7 SUPPORT',
+            faIcon: 'fa-envelope-open-o'
         }
     ]
 

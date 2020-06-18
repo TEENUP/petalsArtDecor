@@ -1,11 +1,19 @@
-
 <section id="section-welcome" class="bg-loop bg-fit-height full-height" [ngStyle]="{'background-position': bgPosition}">
 </section>
 
-<section>
+<section style="padding: 10px 0">
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection}">
         <div class="left-what-we-do">
             <h2>{{item.heading}}</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+            </p>
+            <a class="text-color">READ MORE <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/{{item.image}}">
@@ -16,21 +24,30 @@
 <section class="our-process-section">
     <h2>OUR PROCESS</h2>
     <div class="our-process">
-        <div *ngFor="let item of ourProcess" class="circular-process">{{item.value}}</div>
+        <div *ngFor="let item of ourProcess" class="circular-process">
+            {{item.value}}
+        </div>
     </div>
 </section>
 
-<section>
-<h2>TESTIMONIALS</h2>
-<div>
+<section class="testimonials-section">
+    <h2>TESTIMONIALS</h2>
+    <div>
 
-</div>
+    </div>
 </section>
 
 <section class="experience-container">
-    <div class="experience-item" *ngFor="let item of experienceWithUs" [ngClass]="{'experience-item-centre': item.centre}">
-        <h2 class="text-color contact-heading">{{item.heading}}</h2>
-        <p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+    <div class="experience-item" *ngFor="let item of experienceWithUs"
+        [ngClass]="{'experience-item-centre': item.centre}">
+        <div class="icon">
+            <i class="fa {{item.faIcon}} fa-lg"></i>
+        </div>
+        <div>
+            <h2 class="text-color contact-heading">{{item.heading}}</h2>
+            <p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        </div>
     </div>
 </section>
 
