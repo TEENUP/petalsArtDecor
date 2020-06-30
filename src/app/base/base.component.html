@@ -1,10 +1,15 @@
-<section id="section-welcome" class="bg-loop bg-fit-height full-height" [ngStyle]="{'background-position': bgPosition}">
+<section id="section-welcome" class="section-welcome bg-loop bg-fit-height full-height" [ngStyle]="{'background-position': bgPosition}">
+    <div class="text">
+        <p>OUR EXPERTISE FOR</p>
+        <h1>INTERIOR DESIGN</h1>    
+        <a class="text-color" href='/projects'>OUR PORTFOLIO <i class="fa fa-angle-right fa-lg"></i></a>
+    </div>
 </section>
 
 <section style="padding: 10px 0">
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection}">
         <div class="left-what-we-do">
-            <h2>{{item.heading}}</h2>
+            <h2 class="text-color">{{item.heading}}</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -13,7 +18,7 @@
                 deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium.
             </p>
-            <a class="text-color">READ MORE <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" href='/projects'>SEE MORE <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/{{item.image}}">
@@ -22,7 +27,7 @@
 </section>
 
 <section class="our-process-section">
-    <h2>OUR PROCESS</h2>
+    <h1 class="text-color">OUR PROCESS</h1>
     <div class="our-process">
         <div *ngFor="let item of ourProcess" class="circular-process">
             {{item.value}}
@@ -30,12 +35,12 @@
     </div>
 </section>
 
-<section class="testimonials-section">
+<!-- <section class="testimonials-section">
     <h2>TESTIMONIALS</h2>
     <div>
 
     </div>
-</section>
+</section> -->
 
 <section class="experience-container">
     <div class="experience-item" *ngFor="let item of experienceWithUs"
@@ -44,7 +49,7 @@
             <i class="fa {{item.faIcon}} fa-lg"></i>
         </div>
         <div>
-            <h2 class="text-color contact-heading">{{item.heading}}</h2>
+            <h2 class="text-color exp-head">{{item.heading}}</h2>
             <p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam, eaque ipsa quae.</p>
         </div>

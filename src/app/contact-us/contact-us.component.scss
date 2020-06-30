@@ -1,0 +1,30 @@
+.contact {
+    position: relative;
+    top: 105px;
+    h1 {
+        margin-left: 50px;
+    }
+}
+.contact-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 110px;
+
+    form {
+        width: 40%;
+    }
+
+    .mat-form-field {
+        width: 60%;
+        textarea {
+            height: 100px;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        background-color: #df9f91;
+        color: #000;
+    }
+}

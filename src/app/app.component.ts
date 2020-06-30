@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -7,8 +7,6 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-
 
   navbarMenu = [
     {
@@ -48,15 +46,18 @@ export class AppComponent {
       name: 'Projects'
     },
     '/services': {
-      image: '5.jpg',
+      image: '7.jpg',
       name: 'Services'
     },
-    '/contact-us': {
-      image: '7.jpg',
-      name: 'Contact Us'
-    }
+    // '/contact-us': {
+    //   image: '7.jpg',
+    //   video: 'bg-videos.MP4',
+    //   key: 'contactUS',
+    //   name: 'Contact Us'
+    // }
   }
   currentActiveRoute:any;
+  @ViewChild('goToTop', {static: false}) goToTop: ElementRef;
   
   constructor(private router: Router) {
   }
@@ -67,6 +68,12 @@ export class AppComponent {
         this.currentActiveRoute = event.url;
       }
     });
+  }
+  
+  scrollTop(event) {
+    console.log(event);
+    document.body.scrollTop = 0;
+    this.goToTop.nativeElement.scrollTop = 0;
   }
 
 
