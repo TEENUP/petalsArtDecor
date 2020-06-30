@@ -7,6 +7,14 @@ import {ParallaxDirective} from './parallax.directive';
 import { BaseComponent } from './base/base.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
+
 
 @NgModule({
   declarations: [
@@ -14,11 +22,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
     ParallaxDirective,
     BaseComponent,
     ServicesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

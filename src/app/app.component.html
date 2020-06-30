@@ -1,8 +1,8 @@
 <header class="header">
-    <img src="../../assets/logo-eps-svg.svg">
+    <img src="../../assets/logo-eps-svg.svg" routerLink='home'>
     <nav>
         <ul class="list-container">
-            <li *ngFor="let menu of navbarMenu" routerLink='{{menu.redirectTo}}'>
+            <li *ngFor="let menu of navbarMenu" routerLinkActive="active-link" routerLink='{{menu.redirectTo}}'>
                 {{menu.value}}
             </li>
         </ul>
@@ -12,7 +12,7 @@
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
         <div class="route-content">
-            <div class="route-heading">{{activeRoute[currentActiveRoute].name}}</div>
+            <div class="text-color route-heading">{{activeRoute[currentActiveRoute].name}}</div>
             <div class="route-link"><a [routerLink]="['home']" class="text-color" style="text-decoration: unset;">Home</a> / {{activeRoute[currentActiveRoute].name}}</div>
         </div>
     </div>
@@ -20,45 +20,47 @@
 
     <footer>
         <div class="quoatation-container bg-color">
-            <p>We love to make you more comfort on your home</p> <a>GET QUOTATION</a>
+            <p style="margin: 0;">We love to make you more comfort on your home</p> <a href="/contact-us">GET QUOTATION</a>
         </div>
         <div class="footer-container">
             <div>
                 <img src="../assets/logo-eps-svg.svg">
                 <p align="justify">
-                    We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis
-                    iste
-                    natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo
-                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    is a wholly-owned interior design firm based in the Delhi area since 2016, which
+                combines expertise in interior design whether residential or commercial. Whether you need a quick
+                refresh of
+                furniture and paint colors, or a whole-house renovation, we can provide the technology to ensure the
+                project
+                is running smoothly and give you great results.
                 </p>
             </div>
             <div class="footer-contact">
                 <h2 class="contact-heading text-color">CONTACT US</h2>
                 <p>C-11/110 &nbsp; Sector-3 Rohini Delhi-110085</p>
                 <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
-                <p><span class="text-color" style="padding-right: 19px;">Email:</span> contact@petalsartdecor.com</p>
+                <p><span class="text-color" style="padding-right: 19px;">Email:</span> info@petalsartdecor.com</p>
                 <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
+                <p><span class="text-color" style="padding-right: 30px;">Open:</span> Monday - Sunday &nbsp; 09:30 - 18:30</p>
             </div>
         </div>
         <div class="copyright">
-            © Copyright 2020 - Petals Art Decor, worlds best <span class="text-color"> Interior Designers</span>
+            © Copyright 2020 - Petals Art Decor, <span class="text-color"> Interior Design Firm</span>
             <div class="social-icons">
 
-                <a>
+                <a href="https://www.facebook.com/petalsartdecor/" target="_blank">
                     <i class="fa fa-facebook fa-lg text-color"></i>
                 </a>
-                <a>
+                <a href="https://www.instagram.com/petalsartdecor?r=nameTag" target="_blank">
                     <i class="fa fa-instagram fa-lg text-color"></i>
                 </a>
-                <a>
+                <a href="https://wa.me/919873779876" target="_blank">
                     <i class="fa fa-whatsapp fa-lg text-color"></i>
                 </a>
             </div>
         </div>
         <a></a>
     </footer>
-    <div class="back-to-top bg-color">
+    <div class="back-to-top bg-color" #goToTop (click)="scrollTop($event)">
         <a>
             <i class="fa fa-angle-up fa-lg"></i>
         </a>

@@ -19,17 +19,18 @@ export class BaseComponent implements OnInit {
             flexDirection: 'unset'
         },
         {
-            heading: 'Office Design',
-            conent: '',
-            image: 'office.jpg',
-            flexDirection: 'row-reverse'
-        },
-        {
             heading: 'Commercial Design',
             conent: '',
             image: 'commercial.jpg',
+            flexDirection: 'row-reverse'
+        },
+        {
+            heading: 'Office Design',
+            conent: '',
+            image: 'office.jpg',
             flexDirection: 'unset'
         },
+        
         // {
         //   heading: 'Hospitality Design',
         //   conent: '',
@@ -60,7 +61,7 @@ export class BaseComponent implements OnInit {
     experienceWithUs = [
         {
             heading: 'INTERIOR EXPERTISE',
-            faIcon: ''
+            faIcon: 'fa-home'
         },
         {
             heading: 'FREE CONSULTATION',
@@ -73,7 +74,7 @@ export class BaseComponent implements OnInit {
         },
         {
             heading: 'GUARANTEED WORKS',
-            faIcon: ''
+            faIcon: 'fa-recycle'
         },
         {
             heading: '24 / 7 SUPPORT',
@@ -83,10 +84,10 @@ export class BaseComponent implements OnInit {
 
     
     constructor() {
-        // setInterval(() => {
-        //     this.bgPos = this.bgPos - 0.15;
-        //     this.bgPosition = `${this.bgPos}px`;
-        // }, 0);
+        setInterval(() => {
+            this.bgPos = this.bgPos - 0.15;
+            this.bgPosition = `${this.bgPos}px`;
+        }, 0);
     }
 
     ngOnInit() {

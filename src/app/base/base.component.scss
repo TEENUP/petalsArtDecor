@@ -28,7 +28,7 @@ body {
     height: 434px;
     background-repeat: no-repeat;
 
-    h2 {
+    h1 {
         text-align: center;
     }
 }
@@ -41,7 +41,7 @@ body {
     align-items: center;
 }
 .circular-process {
-    background-color: lavenderblush;
+    background-color: #df9f91;
     width: 15%;
     height: calc(100vw/6.66);
     border-radius: 50%;
@@ -53,6 +53,14 @@ body {
     white-space: pre-wrap;
     padding: 15px;
     margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.circular-process:hover {
+    background-color: #000 !important;
+    color: #df9f91 !important;
 }
 
 // testimonials 
@@ -68,7 +76,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 90px 100px;
 }  
 
 .experience-item {
@@ -79,6 +87,13 @@ body {
         padding: 10px 20px 10px 0;
         font-size: 34px;
         color: #df9f91;
+        text-align: center;
+        i {
+            width: 40px;
+        }
+    }
+    .exp-head {
+        font-size: 24px;
     }
 }
 
