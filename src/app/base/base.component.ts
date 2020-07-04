@@ -30,7 +30,7 @@ export class BaseComponent implements OnInit {
             image: 'office.jpg',
             flexDirection: 'unset'
         },
-        
+
         // {
         //   heading: 'Hospitality Design',
         //   conent: '',
@@ -82,7 +82,18 @@ export class BaseComponent implements OnInit {
         }
     ]
 
-    
+    portfolio = [
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' },
+        { src: 'pf1.jpg' }
+    ]
+
+
     constructor() {
         setInterval(() => {
             this.bgPos = this.bgPos - 0.15;

@@ -101,3 +101,33 @@ body {
     position: relative;
     top: 60px;
 }
+
+// portfolio css
+
+section#portfolio {
+    width: 100%;
+        ul.pf-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+            li.pf-repeater {
+            width: 25%;
+            float: left;
+            list-style-type: none;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+                img {
+                width: 100%;
+                float: left;
+                transition: 0.5s ease;
+            }
+        }
+    }
+}
+
+#portfolio h1 {
+    text-align: center;
+    position: relative;
+    top: -35px;
+}

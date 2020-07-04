@@ -1,7 +1,8 @@
-<section id="section-welcome" class="section-welcome bg-loop bg-fit-height full-height" [ngStyle]="{'background-position': bgPosition}">
+<section id="section-welcome" class="section-welcome bg-loop bg-fit-height full-height"
+    [ngStyle]="{'background-position': bgPosition}">
     <div class="text">
         <p>OUR EXPERTISE FOR</p>
-        <h1>INTERIOR DESIGN</h1>    
+        <h1>INTERIOR DESIGN</h1>
         <a class="text-color" href='/projects'>OUR PORTFOLIO <i class="fa fa-angle-right fa-lg"></i></a>
     </div>
 </section>
@@ -41,6 +42,17 @@
 
     </div>
 </section> -->
+<section id="portfolio">
+    <h1 class="text-color">OUR PORTFOLIO</h1>
+    <ul class="pf-container">
+        <li *ngFor="let img of portfolio" class="pf-repeater">
+            <img src="../assets/{{img.src}}">
+            <div class="hover-content">
+                <span>Demo Images</span>
+            </div>
+        </li>
+    </ul>
+</section>
 
 <section class="experience-container">
     <div class="experience-item" *ngFor="let item of experienceWithUs"

@@ -298,3 +298,30 @@ video {
     font-family: 'Libre Baskerville', serif !important;
     font-size: 31px;
 }
+
+// portfoliio css
+
+li.pf-repeater .hover-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #111111;
+    opacity: 0;
+    transition: 0.5s ease;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+li.pf-repeater:hover .hover-content {
+    opacity: 0.8;
+    transition: 0.5s ease;
+    visibility: visible;
+}
+
+li.pf-repeater:hover img {
+    transform: scale(1.3);
+    transition: 0.5s ease;
+}
