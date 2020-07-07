@@ -71,9 +71,7 @@ export class AppComponent {
   }
   
   scrollTop(event) {
-    console.log(event);
-    document.body.scrollTop = 0;
-    this.goToTop.nativeElement.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 
 
