@@ -18,6 +18,37 @@ body {
     margin: 0 !important;
 }
 
+.what-we-do-section {
+    h1 {
+        text-align: center;
+    }
+
+    // .quoatation-container {
+    //     height: 100px;
+    //     display: flex;
+    //     font-size: 20px;
+    //     color: #000000;
+    //     width: 100%;
+    //     align-items: center;
+    //     justify-content: space-around;
+    //     p {
+    //         font-size: 25px;
+    //     }
+    //     a {
+    //         border: 1px solid #000;
+    //         border-radius: 5px;
+    //         padding: 10px 30px;
+    //         cursor: pointer;
+    //         color: #000000;
+    //         text-decoration: unset;
+    //     }
+    //     a:hover {
+    //         background: #000;
+    //         color: #df9f91;
+    //     }
+    // }
+}
+
 
 // section our purposes
 
@@ -76,11 +107,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 90px 100px;
+    padding: 90px 30px;
 }  
 
 .experience-item {
-    width: 28%;
+    width: 32%;
     display: flex;
     align-items: center;
     .icon {
@@ -99,7 +130,7 @@ body {
 
 .experience-item-centre {
     position: relative;
-    top: 60px;
+    top: 120px;
 }
 
 // portfolio css
@@ -112,6 +143,7 @@ section#portfolio {
         padding: 0;
             li.pf-repeater {
             width: 25%;
+            height: 250px;
             float: left;
             list-style-type: none;
             background-size: cover;
@@ -128,6 +160,11 @@ section#portfolio {
 
 #portfolio h1 {
     text-align: center;
+    position: relative;
+    top: -35px;
+}
+
+#portfolio h1 + .separator {
     position: relative;
     top: -35px;
 }

@@ -2,24 +2,27 @@
     [ngStyle]="{'background-position': bgPosition}">
     <div class="text">
         <p>OUR EXPERTISE FOR</p>
-        <h1>INTERIOR DESIGN</h1>
-        <a class="text-color" href='/projects'>OUR PORTFOLIO <i class="fa fa-angle-right fa-lg"></i></a>
+        <h1 class="text-color">INTERIOR DESIGN</h1>
+        <a href='/projects'>VIEW OUR WORK <i class="fa fa-angle-right fa-lg text-color"></i></a>
     </div>
 </section>
 
-<section style="padding: 10px 0">
-    <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection}">
+<section class="what-we-do-section" style="padding: 10px 0">
+    <div class="quoatation-container bg-color">
+        <p style="margin: 0;">We love to make you more comfort on your home</p> <a href="/contact-us">GET QUOTATION</a>
+    </div>
+    <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
             <h2 class="text-color">{{item.heading}}</h2>
+            <div class="separator" style="background-size: cover;">
+                <span>
+                    <i class="fa fa-circle"></i>
+                </span>
+            </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium.
+                {{item.content1}}
             </p>
-            <a class="text-color" href='/projects'>SEE MORE <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" href='/projects'>SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/{{item.image}}">
@@ -29,6 +32,11 @@
 
 <section class="our-process-section">
     <h1 class="text-color">OUR PROCESS</h1>
+    <div class="separator" style="background-size: cover;">
+        <span>
+            <i class="fa fa-circle"></i>
+        </span>
+    </div>
     <div class="our-process">
         <div *ngFor="let item of ourProcess" class="circular-process">
             {{item.value}}
@@ -44,9 +52,14 @@
 </section> -->
 <section id="portfolio">
     <h1 class="text-color">OUR PORTFOLIO</h1>
+    <div class="separator" style="background-size: cover;">
+        <span>
+            <i class="fa fa-circle"></i>
+        </span>
+    </div>
     <ul class="pf-container">
         <li *ngFor="let img of portfolio" class="pf-repeater">
-            <img src="../assets/{{img.src}}">
+            <img src="../assets/portfolio/{{img.src}}">
             <div class="hover-content">
                 <span>Demo Images</span>
             </div>
@@ -62,8 +75,7 @@
         </div>
         <div>
             <h2 class="text-color exp-head">{{item.heading}}</h2>
-            <p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae.</p>
+            <p align="justify">{{item.description}}</p>
         </div>
     </div>
 </section>

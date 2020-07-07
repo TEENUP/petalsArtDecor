@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 
@@ -23,7 +24,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BaseComponent,
     ServicesComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
