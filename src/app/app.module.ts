@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -33,7 +35,9 @@ import { ProjectsComponent } from './projects/projects.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
