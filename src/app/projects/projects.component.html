@@ -1,0 +1,23 @@
+
+
+<!-- 
+<div class="project-service-container">
+    <div *ngFor="let item of whatWeDo">
+        <img src="../../assets/{{item.image}}">
+    </div>
+</div> -->
+
+
+
+
+<div id="portfolio">
+    <!-- <h1 class="text-color">OUR PORTFOLIO</h1> -->
+    <ul class="pf-container">
+        <li *ngFor="let img of portfolio" class="pf-repeater">
+            <img src="../../assets/portfolio/{{img.src}}">
+            <div class="hover-content">
+                <span>Demo Images</span>
+            </div>
+        </li>
+    </ul>
+</div>
