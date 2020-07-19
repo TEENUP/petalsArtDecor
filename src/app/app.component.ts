@@ -41,10 +41,10 @@ export class AppComponent {
       image: '10.jpg',
       name: 'About Us'
     },
-    '/projects': {
-      image: '6.jpg',
-      name: 'Projects'
-    },
+    // '/projects': {
+    //   image: '6.jpg',
+    //   name: 'Projects'
+    // },
     '/services': {
       image: '7.jpg',
       name: 'Services'

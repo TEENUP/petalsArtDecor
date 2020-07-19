@@ -19,6 +19,42 @@ export class ProjectsComponent {
         { src: '6dinning area_1.JPG' }
     ]
 
+    imageObject: Array<object> = [
+        {
+            image: 'assets/portfolio/2.JPG',
+            thumbImage: 'assets/portfolio/2.JPG',
+        },
+        {
+            image: 'assets/portfolio/21.JPG',
+            thumbImage: 'assets/portfolio/21.JPG',
+        },
+        {
+            image: 'assets/portfolio/3Living room.JPG',
+            thumbImage: 'assets/portfolio/3Living room.JPG',
+        },
+        {
+            image: 'assets/portfolio/3living room_1.JPG',
+            thumbImage: 'assets/portfolio/3living room_1.JPG',
+        },
+        {
+            image: 'assets/portfolio/4living room.JPG',
+            thumbImage: 'assets/portfolio/4living room.JPG',
+        },
+        {
+            image: 'assets/portfolio/5living room.JPG',
+            thumbImage: 'assets/portfolio/5living room.JPG',
+        },
+        {
+            image: 'assets/portfolio/6dinning area.JPG',
+            thumbImage: 'assets/portfolio/6dinning area.JPG',
+        },
+        {
+            image: 'assets/portfolio/6dinning area_1.JPG',
+            thumbImage: 'assets/portfolio/6dinning area_1.JPG',
+        }
+    ]
+
+
     whatWeDo = [
         {
             heading: 'Residential Design',
