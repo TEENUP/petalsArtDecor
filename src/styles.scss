@@ -36,7 +36,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    // padding: 10px;s
     z-index: 100;
     width: 100%;
 }
@@ -52,6 +52,7 @@ footer {
         position: relative;
         top: 200px;
         left: 100px;
+        width: 80%;
         p {
             font-size: 20px;
             margin-bottom: 30px;
@@ -377,4 +378,17 @@ li.pf-repeater:hover img {
         top: 5px;
         width: 220px;
     }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 480px) {
+    
 }

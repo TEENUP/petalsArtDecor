@@ -56,22 +56,32 @@ export class AppComponent {
     //   name: 'Contact Us'
     // }
   }
-  currentActiveRoute:any;
-  @ViewChild('goToTop', {static: false}) goToTop: ElementRef;
-  
+  currentActiveRoute: any;
+  @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
+
   constructor(private router: Router) {
+    console.log(window.navigator);
   }
 
   ngOnInit() {
     this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd) {
         this.currentActiveRoute = event.url;
       }
     });
   }
-  
+
   scrollTop(event) {
     window.scrollTo(0, 0);
+  }
+
+  toggle() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
   }
 
 

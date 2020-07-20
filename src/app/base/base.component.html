@@ -3,13 +3,13 @@
     <div class="text">
         <p>OUR EXPERTISE IN</p>
         <h1 class="text-color">INTERIOR DESIGN</h1>
-        <a href='/projects'>VIEW OUR WORK <i class="fa fa-angle-right fa-lg text-color"></i></a>
+        <a routerLink="/projects">VIEW OUR WORK <i class="fa fa-angle-right fa-lg text-color"></i></a>
     </div>
 </section>
 
 <section class="what-we-do-section" style="padding: 10px 0">
     <div class="quoatation-container bg-color">
-        <p style="margin: 0;">We love to make you more comfort on your home</p> <a href="/contact-us">GET QUOTATION</a>
+        <p style="margin: 0;">We love to make you more comfort on your home</p> <a routerLink="/contact-us">GET QUOTATION</a>
     </div>
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
@@ -22,7 +22,7 @@
             <p>
                 {{item.content1}}
             </p>
-            <a class="text-color" href='/projects'>SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" routerLink="projects">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/{{item.image}}">
