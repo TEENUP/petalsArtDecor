@@ -9,7 +9,7 @@
 
 <section class="what-we-do-section" style="padding: 10px 0">
     <div class="quoatation-container bg-color">
-        <p style="margin: 0;">We love to make you more comfort on your home</p> <a routerLink="/contact-us">GET QUOTATION</a>
+        <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality...</p> <a routerLink="/contact-us">GET QUOTATION</a>
     </div>
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
@@ -22,7 +22,7 @@
             <p>
                 {{item.content1}}
             </p>
-            <a class="text-color" routerLink="projects">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" routerLink="/projects">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/{{item.image}}">
@@ -61,7 +61,7 @@
         <li *ngFor="let img of portfolio" class="pf-repeater">
             <img src="../assets/portfolio/{{img.src}}">
             <div class="hover-content">
-                <span>Demo Images</span>
+                <!-- <span>Demo Images</span> -->
             </div>
         </li>
     </ul>

@@ -45,10 +45,10 @@ export class AppComponent {
     //   image: '6.jpg',
     //   name: 'Projects'
     // },
-    '/services': {
-      image: '7.jpg',
-      name: 'Services'
-    },
+    // '/services': {
+    //   image: '7.jpg',
+    //   name: 'Services'
+    // },
     // '/contact-us': {
     //   image: '7.jpg',
     //   video: 'bg-videos.MP4',

@@ -10,7 +10,7 @@ footer {
     background: #111;
     color: #ccc;
     position: relative;
-    bottom: -65px;
+    bottom: -123px;
 }
 
 .flex {
@@ -29,20 +29,19 @@ footer {
 // header 
 
 .header {
-    position: sticky;  // do sticky on scroll
+    position: relative;
     top: 0;
-    background-color: rgba(0, 0, 0, .6);
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 10px;s
     z-index: 100;
     width: 100%;
 }
 
 .header img {
-    width: 70px;
+    width: 150px;
+    margin: 1% 0 1% 3%;
     outline: unset;
     cursor: pointer;
 }
@@ -243,7 +242,9 @@ footer {
     align-items: center;
     justify-content: space-around;
     p {
-        font-size: 25px;
+        font-size: 32px;
+        font-family: Dancing Script;
+        font-weight: 600;
     }
     a {
         border: 1px solid #000;

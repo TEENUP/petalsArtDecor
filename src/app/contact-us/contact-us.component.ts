@@ -12,10 +12,10 @@ import {Email} from "../../assets/js/smtp.js";
 export class ContactUsComponent {
 
     contactData: any = {
-        name:'Puneet',
-        email: 'teenup05@gmail.com',
-        number: '8920226154',
-        msg: 'Hi this is a test email for testing whether email are sent or not... haha',
+        name:'',
+        email: '',
+        number: '',
+        msg: '',
     };
 
     constructor() {
@@ -33,7 +33,7 @@ export class ContactUsComponent {
             Subject: `Query for petals art decor from ${this.contactData.name}`,
             Body: `
             <i>This is sent as a Query for Petals art decor.</i> <br/> <b>Name: </b>${this.contactData.name} <br /> <b>Email: </b>${this.contactData.email}<br /> <b>Message: </b>${this.contactData.msg}<br /> <b>Mobile:</b> <br /> ${this.contactData.number} <br><br> <b>~End of Message.~</b> `
-        }).then(message => { alert('Your Message has been sent successfully') });
+        }).then(message => { alert('Your Message has been sent successfully'); this.contactData = {} });
 
     }
 

@@ -105,7 +105,7 @@ export class BaseComponent implements OnInit {
 
     constructor() {
         setInterval(() => {
-            this.bgPos = this.bgPos - 0.15;
+            this.bgPos = this.bgPos - 0.3;
             this.bgPosition = `${this.bgPos}px`;
         }, 0);
     }

@@ -21,7 +21,7 @@
         </div> -->
     </nav>
 </header>
-<div style="position: relative; top: -60px; height: 100%;">
+<div style="position: relative; top: -126px; height: 100%;">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
         <div class="route-content">
@@ -34,7 +34,7 @@
 
     <footer>
         <div class="quoatation-container bg-color">
-            <p style="margin: 0;">We love to make you more comfort on your home</p> <a href="/contact-us">GET
+            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality...</p> <a routerLink="/contact-us">GET
                 QUOTATION</a>
         </div>
         <div class="footer-container">
@@ -75,7 +75,11 @@
             </div>
         </div>
         <a></a>
-        <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=YitqlDa5AshbwEYPA0v4w50IJyrviRnJW8s0MV4xOdmBcNGUuhcKq15xOBEM"></script></span>
+        <span id="siteseal">
+            <script async type="text/javascript"
+                src="https://seal.godaddy.com/getSeal?sealID=YitqlDa5AshbwEYPA0v4w50IJyrviRnJW8s0MV4xOdmBcNGUuhcKq15xOBEM">
+                </script>
+        </span>
     </footer>
     <div class="back-to-top bg-color" #goToTop (click)="scrollTop($event)">
         <a>

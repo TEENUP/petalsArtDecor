@@ -12,7 +12,7 @@
                 <div>
                     <mat-form-field>
                         <mat-label>Name</mat-label>
-                        <input matInput placeholder="Enter Name" [(ngModel)]="contactData.name">
+                        <input matInput placeholder="Enter Name" [(ngModel)]="contactData.name" required>
                     </mat-form-field>
                 </div>
                 <div>
@@ -24,16 +24,16 @@
                 <div>
                     <mat-form-field>
                         <mat-label>Phone No</mat-label>
-                        <input matInput placeholder="Enter Phone No." [(ngModel)]="contactData.number">
+                        <input type="number" maxlength="10" matInput placeholder="Enter Phone No." [(ngModel)]="contactData.number" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Your Message</mat-label>
-                        <textarea matInput placeholder="Your Message" [(ngModel)]="contactData.msg"></textarea>
+                        <textarea matInput placeholder="Your Message" [(ngModel)]="contactData.msg" required></textarea>
                     </mat-form-field>
                 </div>
-                <button mat-raised-button (click)="sendEmail(contactData)">Submit</button>
+                <button mat-raised-button (click)="sendEmail(contactData)" [disabled]="!(contactData.name && contactData.number && contactData.msg)">Submit</button>
             </div>
             <!-- <div>
             <h2>CONTACT INFO</h2>
