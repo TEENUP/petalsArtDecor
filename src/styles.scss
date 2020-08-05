@@ -75,9 +75,9 @@ footer {
     }
     a:hover {
         background-color: #df9f91;
-        color: #dddddd;
+        color: #111;
         i {
-            color: #dddddd;
+            color: #111;
         }
     }
 }
@@ -140,7 +140,6 @@ footer {
         }
     }
     p {
-        // width: 60%;
         margin: 5% 12%;
         font-size: 13px;
         text-align: justify;
@@ -149,7 +148,7 @@ footer {
 
     a:hover {
         background-color: #df9f91;
-        color: #dddddd;;
+        color: #111;;
     }
 }
 .right-what-we-do {
@@ -243,8 +242,10 @@ footer {
     justify-content: space-around;
     p {
         font-size: 32px;
-        font-family: Dancing Script;
-        font-weight: 600;
+        font-family: Great Vibes, cursive;
+        font-weight: 500;
+        letter-spacing: 2px;
+        word-spacing: 5px;
     }
     a {
         border: 1px solid #000;
@@ -275,11 +276,16 @@ footer {
 
     i {
         font-size: 25px;
+        color: #111;
     }
 }
 .back-to-top:hover {
     background-color: #000;
     color: #df9f91;
+    i {
+        font-size: 25px;
+        color: #df9f91;
+    }
 }
 
 html, body { height: 100%; }

@@ -120,9 +120,11 @@ export class BaseComponent implements OnInit {
                 });
             }
         });
+        console.log(this.allImages);
         for(let i=0;i<8;i++) {
-            this.portfolioImages[i] = this.allImages[Math.floor(Math.random() * this.allImages.length) + 1];
+            this.portfolioImages[i] = this.allImages[Math.floor(Math.random() * this.allImages.length)];
         }
+        console.log(this.portfolioImages);
     }
 
     selectProcess(process) {
