@@ -8,20 +8,26 @@
 </div> -->
 
 <div class="image-sldier">
-    <ng-image-slider  [images]="imageObject" [infinite]="true" [animationSpeed]="1" [slideImage]="3" [imageSize]="{width:'400px', height:'300px', space: 3}" [autoSlide]="3"></ng-image-slider>
+    <ng-image-slider #slider  [images]="imageObject" [infinite]="true" [animationSpeed]="1" [slideImage]="3" [imageSize]="{width:'400px', height:'300px', space: 3}" [autoSlide]="3"></ng-image-slider>
 </div>
-
-
-
 
 <div id="portfolio">
     <!-- <h1 class="text-color">OUR PORTFOLIO</h1> -->
+    <div class="heading-container text-color">
+        <div *ngFor="let item of whatWeDo"  [ngClass]="{'selected': selectedFilter.heading === item.heading }" (click)="filterProjects(item)">
+            {{item.heading}}
+        </div>
+    </div>
     <ul class="pf-container">
-        <li *ngFor="let img of portfolio" class="pf-repeater">
+        <li *ngFor="let img of filterPortFolio; let i=index" class="pf-repeater">
             <img src="../../assets/portfolio/{{img.src}}">
             <div class="hover-content">
-                <span>Demo Images</span>
+                <a class="text-color" (click)="enlarge(img.slider)">SEE PROJECT <i class="fa fa-angle-right fa-lg"></i></a>
             </div>
         </li>
     </ul>
+</div>
+
+<div>
+    <ng-image-slider style="display: none;" #portfolio (lightboxClose)="imageSliderClose()"  [images]="sliderImages" [infinite]="true" [animationSpeed]="1"></ng-image-slider>
 </div>

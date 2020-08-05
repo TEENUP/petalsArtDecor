@@ -3,15 +3,17 @@
     <div class="text">
         <p>OUR EXPERTISE IN</p>
         <h1 class="text-color">INTERIOR DESIGN</h1>
-        <a href='/projects'>VIEW OUR WORK <i class="fa fa-angle-right fa-lg text-color"></i></a>
+        <a routerLink="/projects">VIEW OUR WORK <i class="fa fa-angle-right fa-lg text-color"></i></a>
     </div>
 </section>
 
 <section class="what-we-do-section" style="padding: 10px 0">
     <div class="quoatation-container bg-color">
-        <p style="margin: 0;">We love to make you more comfort on your home</p> <a href="/contact-us">GET QUOTATION</a>
+        <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality...</p> <a
+            routerLink="/contact-us">GET QUOTATION</a>
     </div>
-    <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
+    <div *ngFor="let item of whatWeDo" class="what-we-do"
+        [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
             <h2 class="text-color">{{item.heading}}</h2>
             <div class="separator" style="background-size: cover;">
@@ -22,10 +24,10 @@
             <p>
                 {{item.content1}}
             </p>
-            <a class="text-color" href='/projects'>SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" routerLink="/projects" [queryParams]="{filter: item.filter}">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
-            <img src="../assets/{{item.image}}">
+            <img src="../assets/portfolio/{{item.image}}">
         </div>
     </div>
 </section>
@@ -38,18 +40,21 @@
         </span>
     </div>
     <div class="our-process">
-        <div *ngFor="let item of ourProcess" class="circular-process">
+        <div *ngFor="let item of ourProcess" [ngClass]="{'selected': item.key == selectedProcess.key}"
+            class="circular-process" (mouseenter)="selectProcess(item)">
             {{item.value}}
         </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="content">
+        <p>
+            {{selectedProcess.content}}
+        </p>
     </div>
 </section>
 
-<!-- <section class="testimonials-section">
-    <h2>TESTIMONIALS</h2>
-    <div>
-
-    </div>
-</section> -->
 <section id="portfolio">
     <h1 class="text-color">OUR PORTFOLIO</h1>
     <div class="separator" style="background-size: cover;">
@@ -58,10 +63,9 @@
         </span>
     </div>
     <ul class="pf-container">
-        <li *ngFor="let img of portfolio" class="pf-repeater">
-            <img src="../assets/portfolio/{{img.src}}">
+        <li *ngFor="let img of portfolioImages" class="pf-repeater" routerLink="/projects">
+            <img src="../{{img?.src}}">
             <div class="hover-content">
-                <span>Demo Images</span>
             </div>
         </li>
     </ul>

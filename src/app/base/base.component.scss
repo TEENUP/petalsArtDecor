@@ -53,6 +53,7 @@ body {
 // section our purposes
 
 .our-process-section {
+
     background: url(../../assets/bg-2.jpg) fixed center;
     background-size: cover;
     background-attachment: scroll !important;
@@ -62,19 +63,42 @@ body {
     h1 {
         text-align: center;
     }
+    .content {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        p {
+            width: 80%;
+            padding-top: 30px;
+            border-top: 1px solid #df9f91;
+        }
+    }
 }
 .our-process {
+    position: relative;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    height: 100%;
-    // margin: 134px 0;
+    height: 300px;
     align-items: center;
+    .selected {
+        border: 1px solid #df9f91;
+        color: #df9f91;
+        background-color: transparent;
+    }
+
+    .selected:after {
+        content: "";
+        border-left: 1px solid;
+        height: 60px;
+        position: absolute;
+        top: 256px
+    }
 }
 .circular-process {
     background-color: #df9f91;
-    width: 15%;
-    height: calc(100vw/6.66);
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -84,7 +108,7 @@ body {
     white-space: pre-wrap;
     padding: 15px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     color: #000000;
 }

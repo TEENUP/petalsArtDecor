@@ -1,5 +1,5 @@
 
-<section>
+<section class="service-container">
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
             <h2 class="text-color">{{item.heading}}</h2>
@@ -14,10 +14,10 @@
             <p *ngIf="item.content2" [ngStyle]="{'margin-top': item.marginBottom}">
                 {{item.content2}}
             </p>
-            <a class="text-color" href='/projects'>SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" routerLink="/projects" [queryParams]="{filter: item.filter}">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
-            <img src="../../assets/{{item.image}}">
+            <img src="../../assets/portfolio/{{item.image}}">
         </div>
     </div>
 </section>
