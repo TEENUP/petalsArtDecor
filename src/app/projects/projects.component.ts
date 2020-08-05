@@ -1,6 +1,7 @@
 import { Component, ViewChild, ViewChildren } from "@angular/core";
 import { NgImageSliderComponent } from 'ng-image-slider';
 import { PORTFOLIO, TAG } from './project.constant';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'projects',
@@ -79,12 +80,13 @@ export class ProjectsComponent {
     portfolio = PORTFOLIO;
     filterPortFolio = [...this.portfolio];
 
-    constructor() { }
     @ViewChild('portfolio')
     slider: NgImageSliderComponent;
     sliderImages: Array<object> =  [];
-
+    
     tag = TAG;
+    
+    constructor(private activatedRoute: ActivatedRoute) { }
 
     ngOnInit() {
         this.portfolio.map(type => {
@@ -106,6 +108,13 @@ export class ProjectsComponent {
         for(let i=0;i<15;i++) {
             this.imageObject[i] = this.allImages[Math.floor(Math.random() * this.allImages.length) + 1];
         }
+
+        this.activatedRoute.queryParams.subscribe(params => {
+            const type = this.whatWeDo.find(item => item.filter == params.filter);
+            if(type){
+                this.filterProjects(type);
+            }
+        })
     }
 
     enlarge(slider) {

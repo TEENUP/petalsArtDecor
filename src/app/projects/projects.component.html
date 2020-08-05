@@ -19,10 +19,10 @@
         </div>
     </div>
     <ul class="pf-container">
-        <li (click)="enlarge(img.slider)" *ngFor="let img of filterPortFolio; let i=index" class="pf-repeater">
+        <li *ngFor="let img of filterPortFolio; let i=index" class="pf-repeater">
             <img src="../../assets/portfolio/{{img.src}}">
             <div class="hover-content">
-                <!-- <span>Demo Images</span> -->
+                <a class="text-color" (click)="enlarge(img.slider)">SEE PROJECT <i class="fa fa-angle-right fa-lg"></i></a>
             </div>
         </li>
     </ul>

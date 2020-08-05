@@ -41,20 +41,6 @@ export class AppComponent {
       image: '10.jpg',
       name: 'About Us'
     },
-    // '/projects': {
-    //   image: '6.jpg',
-    //   name: 'Projects'
-    // },
-    // '/services': {
-    //   image: '7.jpg',
-    //   name: 'Services'
-    // },
-    // '/contact-us': {
-    //   image: '7.jpg',
-    //   video: 'bg-videos.MP4',
-    //   key: 'contactUS',
-    //   name: 'Contact Us'
-    // }
   }
   currentActiveRoute: any;
   @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
@@ -67,6 +53,7 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentActiveRoute = event.url;
+        window.scrollTo(0, 0);
       }
     });
   }

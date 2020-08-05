@@ -18,7 +18,8 @@ export class BaseComponent implements OnInit {
             content1: "Interior design is an important part of design, focusing on creating interior spaces that make the building functional and aesthetically pleasing. However, we have different types of structures, so it makes sense that we have different types of interior design. One of the major platforms for designers is the design of the living space, or the interior of the spaces where people live. This may include houses, flats, apartments, and many more spaces. A builder may build a house, but it is the designer's job to make it a home.  Therefore, a residential designer's primary focus is creating a livable space.",
             image: 'residential.jpeg',
             bgColor: '#18191b',
-            flexDirection: 'unset'
+            flexDirection: 'unset',
+            filter: 'residential',
         },
         {
             heading: 'Commercial Design',
@@ -26,7 +27,8 @@ export class BaseComponent implements OnInit {
             content2: "A commercial building is one used for some sort of business purpose, such as a store, office, warehouse, or a restaurant. Just as there are many types of buildings, there are different types of interior design. Houses utilize one kind of design, while commercial structures have very different needs. We want these needs to be successful, but a successful structure does require a bit more than just location.",
             image: 'comm2/comm2.1.jpg',
             flexDirection: 'row-reverse',
-            bgColor: 'rgb(33, 34, 37)'
+            bgColor: 'rgb(33, 34, 37)',
+            filter: 'commercial',
         },
         {
             heading: 'Office Design',
@@ -34,31 +36,32 @@ export class BaseComponent implements OnInit {
             image: 'off1/off1.2.jpg',
             flexDirection: 'unset',
             bgColor: '#18191b',
+            filter: 'office',
         },
     ]
     
     ourProcess = [
         {
-            value: 'MEET & AGREE',
-            content: 'abcabcabcabcabcabc abcabcabc abcabcabcabcabcabc abcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabc abcabcabc',
+            value: 'INITIAL MEET',
+            content: "Starting with meet and greet session, Petals Art Décor will determine the goal for the project through discussing the client's vision and the services which we render.",
             selected: true,
             key: 'meetAgree',
         },
         {
-            value: 'IDEA & CONCEPT',
-            content: ' xyx xyxxyxxyx xyx vxyx xyxxyxxyx xyx vxyx xyxxyxxyx xyx vxyx xyxxyxxyx xyx vxyx xyxxyxxyx xyx vxyx xyxxyxxyx xyx v ',
+            value: 'DESIGN & CONCEPT',
+            content: 'After initial discussion, schematic design - a general outlay will be discussed. Through brainstorming, selection of material and designs will be provided to the client. Atlast for illustration of the final concept of space, a 3d design can be rendered.',
             selected: false,
             key: 'ideaConcept',
         },
         {
-            value: 'DESIGN & CREATE',
-            content: 'sas',
+            value: 'EXECUTION',
+            content: 'Starting with scheduling construction timeline and approval of annexure, we will oversee the whole installation of design and your furnishing concepts.',
             selected: false,
             key: 'designCreate',
         },
         {
-            value: 'BUILD & INSTALL',
-            content: 'de',
+            value: 'SITE HANDOVER',
+            content: 'Final walk through with the client and any left issues will be resolved. After satisfaction of client, the space is ready for handover.',
             selected: false,
             key: 'buildInstall',
         }

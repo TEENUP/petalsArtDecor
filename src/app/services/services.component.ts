@@ -14,6 +14,7 @@ export class ServicesComponent implements OnInit {
             image: 'residential.jpeg',
             flexDirection: 'unset',
             bgColor: '#18191b',
+            filter: 'residential'
         },
         {
             heading: 'Commercial Design',
@@ -22,7 +23,8 @@ export class ServicesComponent implements OnInit {
             content2: "A commercial building is one used for some sort of business purpose, such as a store, office, warehouse, or a restaurant. Just as there are many types of buildings, there are different types of interior design. Houses utilize one kind of design, while commercial structures have very different needs. We want these needs to be successful, but a successful structure does require a bit more than just location.",
             image: 'comm2/comm2.1.jpg',
             flexDirection: 'row-reverse',
-            bgColor: 'rgb(33, 34, 37)'
+            bgColor: 'rgb(33, 34, 37)',
+            filter: 'commercial',
         },
         {
             heading: 'Office Design',
@@ -30,6 +32,7 @@ export class ServicesComponent implements OnInit {
             image: 'off1/off1.2.jpg',
             flexDirection: 'unset',
             bgColor: '#18191b',
+            filter: 'office'
         },
         // {
         //   heading: 'Hospitality Design',
