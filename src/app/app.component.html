@@ -26,15 +26,15 @@
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
         <div class="route-content">
             <div class="text-color route-heading">{{activeRoute[currentActiveRoute].name}}</div>
-            <div class="route-link"><a [routerLink]="['home']" class="text-color"
-                    style="text-decoration: unset;">Home</a> / {{activeRoute[currentActiveRoute].name}}</div>
+            <!-- <div class="route-link"><a [routerLink]="['home']" class="text-color"
+                    style="text-decoration: unset;">Home</a> / {{activeRoute[currentActiveRoute].name}}</div> -->
         </div>
     </div>
     <router-outlet></router-outlet>
 
     <footer>
         <div class="quoatation-container bg-color">
-            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality...</p> <a routerLink="/contact-us">GET
+            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a routerLink="/contact-us">GET
                 QUOTATION</a>
         </div>
         <div class="footer-container">

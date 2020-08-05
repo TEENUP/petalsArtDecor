@@ -104,9 +104,10 @@ export class ProjectsComponent {
                 });
             }
         });
+        console.log(this.portfolio);
         this.sliderImages = this.portfolio[0]['slider'];
         for(let i=0;i<15;i++) {
-            this.imageObject[i] = this.allImages[Math.floor(Math.random() * this.allImages.length) + 1];
+            this.imageObject[i] = this.allImages[Math.floor(Math.random() * this.allImages.length)];
         }
 
         this.activatedRoute.queryParams.subscribe(params => {
