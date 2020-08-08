@@ -49,7 +49,7 @@ export class ProjectsComponent {
 
     whatWeDo = [
         {
-            heading: 'ALL Projects',
+            heading: 'ALL',
             filter: 'all'
         },
         {
@@ -106,7 +106,7 @@ export class ProjectsComponent {
         });
         console.log(this.portfolio);
         this.sliderImages = this.portfolio[0]['slider'];
-        for(let i=0;i<15;i++) {
+        for(let i=0;i<25;i++) {
             this.imageObject[i] = this.allImages[Math.floor(Math.random() * this.allImages.length)];
         }
 
