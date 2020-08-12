@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
     <img src="../../assets/logo-eps-svg.svg" routerLink='home'>
     <nav>
         <ul class="list-container">
@@ -6,21 +6,8 @@
                 {{menu.value}}
             </li>
         </ul>
-        <!-- <div class="mobile-container">
-            <div class="topnav">
-                <a href="#home" class="active"><img src="../../assets/logo-eps-svg.svg" routerLink='home'></a>
-                <div id="myLinks">
-                    <a *ngFor="let menu of navbarMenu" routerLinkActive="active-link" routerLink='{{menu.redirectTo}}'>
-                        {{menu.value}}
-                    </a>
-                </div>
-                <a href="javascript:void(0);" class="icon" (click)="toggle()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div> -->
     </nav>
-</header>
+</header> -->
 <div style="position: relative; top: -126px; height: 100%;">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
@@ -32,16 +19,19 @@
     </div>
     <router-outlet></router-outlet>
 
-    <footer>
-        <div class="quoatation-container bg-color">
-            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a routerLink="/contact-us">GET
-                QUOTATION</a>
+    <!-- <footer>
+        <div class="bg-color marquee">
+            <div class="quoatation-container bg-color">
+                <p style="margin: 0; font-size: 40px;">Affordable, Reliable & Competent designs that reflects your
+                    personality.</p> <a routerLink="/contact-us">GET
+                    QUOTATION</a>
+            </div>
         </div>
         <div class="footer-container">
             <div>
                 <img src="../assets/logo-eps-svg.svg">
                 <p class="company-intro" align="justify">
-                    An interior design firm based in the Delhi area since 2016, which
+                    An interior design firm based in the Delhi area, which
                     combines expertise in interior design whether residential or commercial. Whether you need a quick
                     refresh of
                     furniture and paint colors, or a whole-house renovation, we can provide the technology to ensure the
@@ -80,7 +70,7 @@
                 src="https://seal.godaddy.com/getSeal?sealID=YitqlDa5AshbwEYPA0v4w50IJyrviRnJW8s0MV4xOdmBcNGUuhcKq15xOBEM">
                 </script>
         </span>
-    </footer>
+    </footer> -->
     <div class="back-to-top bg-color" #goToTop (click)="scrollTop($event)">
         <a>
             <i class="fa fa-angle-up fa-lg"></i>

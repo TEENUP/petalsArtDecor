@@ -28,3 +28,77 @@
         color: #000;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .contact {
+        position: relative;
+        top: 150px;
+        h1 {
+            margin-left: 50px;
+        }
+    }
+    .contact-us {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 110px;
+    
+        .form {
+            width: 40%;
+        }
+    
+        .mat-form-field {
+            width: 60%;
+            textarea {
+                height: 100px;
+            }
+        }
+    
+        button {
+            margin-top: 20px;
+            background-color: #df9f91;
+            color: #000;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        position: relative;
+        top: 150px;
+        h1 {
+            margin-left: 50px;
+        }
+    }
+    .contact-us {
+        display: block;
+        margin-bottom: 110px;
+        video {
+            width: 100%;
+        }
+        .form {
+            width: 100%;
+            margin-top: 10px;
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    
+        .mat-form-field {
+            width: 60%;
+            margin: 0 20%;
+            textarea {
+                height: 100px;
+            }
+        }
+    
+        button {
+            margin-top: 20px;
+            background-color: #df9f91;
+            color: #000;
+            margin: 0 20%;
+        }
+    }
+}

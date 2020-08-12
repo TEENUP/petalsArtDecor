@@ -1,8 +1,5 @@
 .about-us{
-    // height: 500px;
-    
     .about-us-container {
-        // height: inherit;
         .about-head {
             font-size: 30px;
             color: #df9f91;
@@ -13,7 +10,6 @@
             background: url(../../assets/office.jpg) fixed center;
             width: 50%;
         }
-        
         .about-text {
             padding: 50px 300px;
             letter-spacing: 1px;
@@ -33,6 +29,30 @@
             background: lightgrey;
             border: solid;
             width: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us{
+        .about-us-container {
+            .about-text {
+                padding: 50px 110px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us{
+        .about-us-container {
+            .about-head {
+                font-size: 24px;
+                letter-spacing: 0;
+            }
+            .about-text {
+                padding: 50px 25px;
+            }
         }
     }
 }
