@@ -44,6 +44,7 @@ export class AppComponent {
   }
   currentActiveRoute: any;
   @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
+  scrollAmount = 5;
 
   constructor(private router: Router) {
     console.log(window.navigator);
@@ -68,6 +69,14 @@ export class AppComponent {
       x.style.display = "none";
     } else {
       x.style.display = "block";
+    }
+  }
+
+  marqueeScrollAmount(actionType?) {
+    if(actionType=='hover') {
+      this.scrollAmount = 0;
+    } else {
+      this.scrollAmount = 5;
     }
   }
 

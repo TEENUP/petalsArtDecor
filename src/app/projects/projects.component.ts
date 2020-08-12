@@ -2,15 +2,46 @@ import { Component, ViewChild, ViewChildren } from "@angular/core";
 import { NgImageSliderComponent } from 'ng-image-slider';
 import { PORTFOLIO, TAG } from './project.constant';
 import { ActivatedRoute } from '@angular/router';
+import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
 
 @Component({
     selector: 'projects',
     templateUrl: 'projects.component.html',
-    styleUrls: ['./projects.component.scss']
+    styleUrls: ['./projects.component.scss'],
+    animations: [
+        trigger('pageAnimations', [
+            transition(':enter', [
+                query('.hero, form', [
+                    style({ opacity: 0, transform: 'translateY(-100px)' }),
+                    stagger(-30, [
+                        animate('800ms cubic-bezier(0.35, 0, 0.25, 1)', style({ opacity: 1, transform: 'none' }))
+                    ])
+                ])
+            ])
+        ]),
+        trigger('filterAnimation', [
+            transition(':enter, * => 0, * => -1', []),
+            transition(':increment', [
+                query(':enter', [
+                    style({ opacity: 0, width: '0px' }),
+                    stagger(50, [
+                        animate('500ms ease-out', style({ opacity: 1, width: '*' })),
+                    ]),
+                ], { optional: true })
+            ]),
+            transition(':decrement', [
+                query(':leave', [
+                    stagger(50, [
+                        animate('500ms ease-out', style({ opacity: 0, width: '0px' })),
+                    ]),
+                ])
+            ]),
+        ]),
+    ]
 })
 
 export class ProjectsComponent {
-    allImages: Array<object>  = [];
+    allImages: Array<object> = [];
     imageObject: Array<object> = [
         {
             image: 'assets/portfolio/2.JPG',
@@ -79,20 +110,22 @@ export class ProjectsComponent {
     // filterPortFilo = [...this.portfolio];
     portfolio = PORTFOLIO;
     filterPortFolio = [...this.portfolio];
+    filterPortFolioCount = -1;
 
     @ViewChild('portfolio')
     slider: NgImageSliderComponent;
-    sliderImages: Array<object> =  [];
-    
+    sliderImages: Array<object> = [];
+
     tag = TAG;
-    
+    imageSlideCount = 3;
+
     constructor(private activatedRoute: ActivatedRoute) { }
 
     ngOnInit() {
         this.portfolio.map(type => {
             type['slider'] = [];
             let index = type.src.split('/')[0];
-            index = index.replace(/\D/g,'');
+            index = index.replace(/\D/g, '');
             for (let i = 1; i <= type.count; i++) {
                 type['slider'].push({
                     image: `assets/portfolio/${this.tag[type.filter]}${index}/${this.tag[type.filter]}${index}.${i}.jpg`,
@@ -106,16 +139,18 @@ export class ProjectsComponent {
         });
         console.log(this.portfolio);
         this.sliderImages = this.portfolio[0]['slider'];
-        for(let i=0;i<25;i++) {
+        for (let i = 0; i < 25; i++) {
             this.imageObject[i] = this.allImages[Math.floor(Math.random() * this.allImages.length)];
         }
 
         this.activatedRoute.queryParams.subscribe(params => {
             const type = this.whatWeDo.find(item => item.filter == params.filter);
-            if(type){
+            if (type) {
                 this.filterProjects(type);
             }
-        })
+        });
+
+        this.setImageSlideCount();
     }
 
     enlarge(slider) {
@@ -132,10 +167,26 @@ export class ProjectsComponent {
         } else {
             this.filterPortFolio = [...this.portfolio];
         }
+        const newTotal = this.filterPortFolio.length;
+
+        if (this.filterPortFolioCount !== newTotal) {
+          this.filterPortFolioCount = newTotal;
+        }
     }
 
     imageSliderClose() {
         this.slider['elRef'].nativeElement.style.display = 'none'
         this.slider.ligthboxShow = false;
+    }
+
+    setImageSlideCount() {
+        const screenSize = window.screen.width;
+        if(screenSize < 480) {
+            this.imageSlideCount = 1;
+        } else if (screenSize > 480 && screenSize<768) {
+            this.imageSlideCount = 2;
+        } else {
+            this.imageSlideCount = 3;
+        }
     }
 }
