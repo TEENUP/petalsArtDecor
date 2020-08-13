@@ -1,4 +1,4 @@
-<!-- <header class="header">
+<header class="header">
     <img src="../../assets/logo-eps-svg.svg" routerLink='home'>
     <nav>
         <ul class="list-container">
@@ -7,7 +7,7 @@
             </li>
         </ul>
     </nav>
-</header> -->
+</header>
 <div style="position: relative; top: -126px; height: 100%;">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
@@ -19,7 +19,7 @@
     </div>
     <router-outlet></router-outlet>
 
-    <!-- <footer>
+    <footer>
         <div class="bg-color marquee">
             <div class="quoatation-container bg-color">
                 <p style="margin: 0; font-size: 40px;">Affordable, Reliable & Competent designs that reflects your
@@ -70,7 +70,7 @@
                 src="https://seal.godaddy.com/getSeal?sealID=YitqlDa5AshbwEYPA0v4w50IJyrviRnJW8s0MV4xOdmBcNGUuhcKq15xOBEM">
                 </script>
         </span>
-    </footer> -->
+    </footer>
     <div class="back-to-top bg-color" #goToTop (click)="scrollTop($event)">
         <a>
             <i class="fa fa-angle-up fa-lg"></i>
