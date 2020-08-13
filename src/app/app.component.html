@@ -1,5 +1,5 @@
 <header class="header">
-    
+
     <!-- RewriteEngine On
     RewriteCond % {SERVER_PORT} 80
     RewriteCond % {HTTP_HOST} ^(www\.)?petalsartdecor\.com
@@ -25,6 +25,18 @@
             </div>
         </div> -->
     </nav>
+    <div class="resp-menu" [ngClass]="{'close-menu': toggleNav}" (click)="openMenu()">
+        <span class="one"></span>
+        <span class="zero"></span>
+        <span class="two"></span>
+    </div>
+    <div class="menu-sm" [ngClass]="{'slide-menu': toggleNav}">
+        <ul class="menu-in" *ngIf="toggleNav" [ngClass]="{'show-delay': toggleNav}">
+            <li *ngFor="let menu of navbarMenu" (click)="closeMenu()" routerLink='{{menu.redirectTo}}'>
+                {{menu.value}}
+            </li>
+        </ul>
+    </div>
 </header>
 <div style="position: relative; top: -126px; height: 100%;">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
@@ -39,7 +51,8 @@
 
     <footer>
         <div class="quoatation-container bg-color">
-            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a routerLink="/contact-us">GET
+            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a
+                routerLink="/contact-us">GET
                 QUOTATION</a>
         </div>
         <div class="footer-container">

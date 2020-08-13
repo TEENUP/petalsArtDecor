@@ -43,6 +43,7 @@ export class AppComponent {
     },
   }
   currentActiveRoute: any;
+  toggleNav: boolean = false;
   @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
 
   constructor(private router: Router) {
@@ -71,5 +72,12 @@ export class AppComponent {
     }
   }
 
+  openMenu() {
+    this.toggleNav = !this.toggleNav;
+  }
+
+  closeMenu() {
+    this.toggleNav = false;
+  }
 
 }
