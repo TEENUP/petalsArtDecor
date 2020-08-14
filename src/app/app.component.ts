@@ -45,6 +45,7 @@ export class AppComponent {
   currentActiveRoute: any;
   toggleNav: boolean = false;
   @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
+  scrollAmount = 5;
 
   constructor(private router: Router) {
     console.log(window.navigator);

@@ -1,9 +1,4 @@
 <header class="header">
-
-    <!-- RewriteEngine On
-    RewriteCond % {SERVER_PORT} 80
-    RewriteCond % {HTTP_HOST} ^(www\.)?petalsartdecor\.com
-    RewriteRule ^(.*)$ https://www.petalsartdecor.com/$1 [R,L] -->
     <img src="../../assets/logo-eps-svg.svg" routerLink='home'>
     <nav>
         <ul class="list-container">
@@ -11,19 +6,6 @@
                 {{menu.value}}
             </li>
         </ul>
-        <!-- <div class="mobile-container">
-            <div class="topnav">
-                <a href="#home" class="active"><img src="../../assets/logo-eps-svg.svg" routerLink='home'></a>
-                <div id="myLinks">
-                    <a *ngFor="let menu of navbarMenu" routerLinkActive="active-link" routerLink='{{menu.redirectTo}}'>
-                        {{menu.value}}
-                    </a>
-                </div>
-                <a href="javascript:void(0);" class="icon" (click)="toggle()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div> -->
     </nav>
     <div class="resp-menu" [ngClass]="{'close-menu': toggleNav}" (click)="openMenu()">
         <span class="one"></span>
@@ -50,10 +32,12 @@
     <router-outlet></router-outlet>
 
     <footer>
-        <div class="quoatation-container bg-color">
-            <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a
-                routerLink="/contact-us">GET
-                QUOTATION</a>
+        <div class="bg-color marquee">
+            <div class="quoatation-container bg-color">
+                <p style="margin: 0; font-size: 40px;">Affordable, Reliable & Competent designs that reflects your
+                    personality.</p> <a routerLink="/contact-us">GET
+                    QUOTATION</a>
+            </div>
         </div>
         <div class="footer-container">
             <div>
