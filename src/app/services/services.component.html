@@ -2,7 +2,7 @@
 <section class="service-container">
     <div *ngFor="let item of whatWeDo" class="what-we-do" [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do">
-            <h2 class="text-color">{{item.heading}}</h2>
+            <h2 style="margin-top: 16px;" class="text-color">{{item.heading}}</h2>
             <div class="separator" style="background-size: cover;">
                 <span>
                     <i class="fa fa-circle"></i>

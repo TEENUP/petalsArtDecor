@@ -20,7 +20,7 @@
         </ul>
     </div>
 </header>
-<div style="position: relative; top: -126px; height: 100%;">
+<div class="content-container" [ngStyle]="{'top': currentActiveRoute=='/about-us' ? '20px' : '-126px'}">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
         <div class="route-content">
@@ -57,7 +57,7 @@
                 <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
                 <p><span class="text-color" style="padding-right: 19px;">Email:</span> info@petalsartdecor.com</p>
                 <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
-                <p><span class="text-color" style="padding-right: 30px;">Open:</span> Monday - Sunday &nbsp; 09:30 -
+                <p><span class="text-color" style="padding-right: 22px;">Open:</span> Monday - Sunday &nbsp; 09:30 -
                     18:30</p>
             </div>
         </div>

@@ -38,8 +38,9 @@ export class AppComponent {
 
   activeRoute = {
     '/about-us': {
-      image: '10.jpg',
-      name: ''
+      image: 'portfolio/res3/res3.1.jpg',
+      name: '',
+      top: '20px'
     },
   }
   currentActiveRoute: any;

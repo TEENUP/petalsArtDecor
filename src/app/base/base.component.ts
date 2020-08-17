@@ -105,9 +105,9 @@ export class BaseComponent implements OnInit {
 
     constructor() {
         setInterval(() => {
-            this.bgPos = this.bgPos - 0.3;
-            this.bgPosition = `${this.bgPos}px`;
-        }, 0);
+             this.bgPos = this.bgPos - 0.3;
+             this.bgPosition = `${this.bgPos}px`;
+         }, 0);
     }
 
     ngOnInit() {
@@ -120,7 +120,6 @@ export class BaseComponent implements OnInit {
                 });
             }
         });
-        console.log(this.allImages);
         for(let i=0;i<8;i++) {
             this.portfolioImages[i] = this.allImages[Math.floor(Math.random() * this.allImages.length)];
         }
