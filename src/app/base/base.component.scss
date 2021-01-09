@@ -172,7 +172,7 @@ section#portfolio {
     top: -35px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 550px) {
     .section-welcome .text {
         display: inline-block;
         left: 6%;
@@ -252,7 +252,7 @@ section#portfolio {
     animation-delay: 1s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
     section#portfolio {
         ul.pf-container {
             li.pf-repeater {

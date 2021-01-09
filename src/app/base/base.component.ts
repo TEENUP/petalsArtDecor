@@ -16,7 +16,7 @@ export class BaseComponent implements OnInit {
         {
             heading: 'Residential Design',
             content1: "Interior design is an important part of design, focusing on creating interior spaces that make the building functional and aesthetically pleasing. However, we have different types of structures, so it makes sense that we have different types of interior design. One of the major platforms for designers is the design of the living space, or the interior of the spaces where people live. This may include houses, flats, apartments, and many more spaces. A builder may build a house, but it is the designer's job to make it a home.  Therefore, a residential designer's primary focus is creating a livable space.",
-            image: 'residential.jpeg',
+            image: 'residential.jpg',
             bgColor: '#18191b',
             flexDirection: 'unset',
             filter: 'residential',

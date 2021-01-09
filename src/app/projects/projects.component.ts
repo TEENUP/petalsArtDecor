@@ -109,7 +109,7 @@ export class ProjectsComponent {
     selectedFilter = this.whatWeDo[0];
     // filterPortFilo = [...this.portfolio];
     portfolio = PORTFOLIO;
-    filterPortFolio = [...this.portfolio];
+    filterPortFolio = [...this.portfolio.reverse()];
     filterPortFolioCount = -1;
 
     @ViewChild('portfolio')
@@ -181,9 +181,9 @@ export class ProjectsComponent {
 
     setImageSlideCount() {
         const screenSize = window.screen.width;
-        if(screenSize < 480) {
+        if(screenSize < 550) {
             this.imageSlideCount = 1;
-        } else if (screenSize > 480 && screenSize<768) {
+        } else if (screenSize > 550 && screenSize<768) {
             this.imageSlideCount = 2;
         } else {
             this.imageSlideCount = 3;

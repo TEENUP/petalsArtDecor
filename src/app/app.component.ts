@@ -38,7 +38,7 @@ export class AppComponent {
 
   activeRoute = {
     '/about-us': {
-      image: 'portfolio/res3/res3.1.jpg',
+      image: '10.jpg',
       name: '',
       top: '20px'
     },
@@ -59,6 +59,8 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
+
+    this.activeRoute['/about-us'].image = window.screen.width < 500 ? 'portfolio/res3/res3.1.jpg' : '10.jpg';
   }
 
   scrollTop(event) {
