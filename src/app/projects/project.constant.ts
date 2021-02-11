@@ -19,6 +19,9 @@ export const PORTFOLIO = [
     { src: 'res13/res13.1.jpg', filter: 'residential', count: 13 },
     { src: 'res14/res14.1.jpg', filter: 'residential', count: 12 },
     { src: 'res15/res15.1.jpg', filter: 'residential', count: 14 },
+
+    { src: 'res16/res16.1.jpg', filter: 'residential', count: 11 },
+    { src: 'res17/res17.1.jpg', filter: 'residential', count: 2 },
 ]
 
 export const TAG = {
