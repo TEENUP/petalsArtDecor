@@ -7,7 +7,7 @@
     </div>
 </section>
 
-<section class="what-we-do-section" style="padding: 10px 0">
+<section class="what-we-do-section" style="padding: 20px 0 10px 0">
     <div class="quoatation-container bg-color">
         <p style="margin: 0;">Affordable, Reliable & Competent designs that reflects your personality.</p> <a
             routerLink="/contact-us">GET QUOTATION</a>
@@ -15,7 +15,7 @@
     <div *ngFor="let item of whatWeDo" class="what-we-do"
         [ngStyle]="{'flex-direction': item.flexDirection, 'background-color': item.bgColor}">
         <div class="left-what-we-do in-left">
-            <h2 class="text-color">{{item.heading}}</h2>
+            <h2 style="margin-top: 16px;" class="text-color">{{item.heading}}</h2>
             <div class="separator" style="background-size: cover;">
                 <span>
                     <i class="fa fa-circle"></i>
@@ -24,7 +24,8 @@
             <p>
                 {{item.content1}}
             </p>
-            <a class="text-color" routerLink="/projects" [queryParams]="{filter: item.filter}">SEE PROJECTS <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="text-color" routerLink="/projects" [queryParams]="{filter: item.filter}">SEE PROJECTS <i
+                    class="fa fa-angle-right fa-lg"></i></a>
         </div>
         <div class="right-what-we-do">
             <img src="../assets/portfolio/{{item.image}}">
@@ -54,6 +55,29 @@
         </p>
     </div>
 </section>
+
+<section class="our-process-section-mobile">
+    <h1 class="text-color">OUR PROCESS</h1>
+    <div class="separator" style="background-size: cover;">
+        <span>
+            <i class="fa fa-circle"></i>
+        </span>
+    </div>
+    <div class="our-process">
+        <div *ngFor="let item of ourProcess" class="our-process-item">
+            <div class="circular-process">
+                {{item.value}}
+            </div>
+            <div class="content">
+                <p>
+                    {{item.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <section id="portfolio">
     <h1 class="text-color">OUR PORTFOLIO</h1>

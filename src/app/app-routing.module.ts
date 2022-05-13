@@ -19,7 +19,7 @@ const routes: Routes = [
     redirectTo: 'home'
   },
   {
-    path:'home',
+    path: 'home',
     component: BaseComponent
   },
   {
@@ -43,15 +43,14 @@ const routes: Routes = [
     path: 'services',
     component: ServicesComponent
   },
-
   {
     path: '**',
     component: ServicesComponent
-}
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

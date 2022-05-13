@@ -7,7 +7,7 @@
 
 <div class="image-sldier">
     <ng-image-slider #slider [images]="imageObject" [infinite]="true" [animationSpeed]="1" [slideImage]="imageSlideCount"
-        [imageSize]="{width:'400px', height:imageSlideCount ==1 ? '200px' : '300px', space: 3}" [autoSlide]="3"></ng-image-slider>
+        [imageSize]="{width:'400px', height:imageSlideCount ==1 ? '320px' : '300px', space: 3}" [autoSlide]="3"></ng-image-slider>
 </div>
 
 <div id="portfolio">
@@ -27,7 +27,7 @@
     </div>
     <ul class="heroes pf-container">
         <li *ngFor="let img of filterPortFolio; let i=index" class="pf-repeater">
-            <img src="../../assets/portfolio/{{img.src}}">
+            <img src="assets/portfolio/{{img.src}}">
             <div class="hover-content">
                 <a class="text-color" (click)="enlarge(img.slider)">SEE PROJECT <i
                         class="fa fa-angle-right fa-lg"></i></a>

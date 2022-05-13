@@ -39,10 +39,12 @@ export class AppComponent {
   activeRoute = {
     '/about-us': {
       image: '10.jpg',
-      name: ''
+      name: '',
+      top: '20px'
     },
   }
   currentActiveRoute: any;
+  toggleNav: boolean = false;
   @ViewChild('goToTop', { static: false }) goToTop: ElementRef;
   scrollAmount = 5;
 
@@ -57,6 +59,8 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
+
+    this.activeRoute['/about-us'].image = window.screen.width < 500 ? 'portfolio/res3/res3.1.jpg' : '10.jpg';
   }
 
   scrollTop(event) {
@@ -72,13 +76,12 @@ export class AppComponent {
     }
   }
 
-  marqueeScrollAmount(actionType?) {
-    if(actionType=='hover') {
-      this.scrollAmount = 0;
-    } else {
-      this.scrollAmount = 5;
-    }
+  openMenu() {
+    this.toggleNav = !this.toggleNav;
   }
 
+  closeMenu() {
+    this.toggleNav = false;
+  }
 
 }

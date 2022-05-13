@@ -1,4 +1,4 @@
-<!-- <header class="header">
+<header class="header">
     <img src="../../assets/logo-eps-svg.svg" routerLink='home'>
     <nav>
         <ul class="list-container">
@@ -7,8 +7,20 @@
             </li>
         </ul>
     </nav>
-</header> -->
-<div style="position: relative; top: -126px; height: 100%;">
+    <div class="resp-menu" [ngClass]="{'close-menu': toggleNav}" (click)="openMenu()">
+        <span class="one"></span>
+        <span class="zero"></span>
+        <span class="two"></span>
+    </div>
+    <div class="menu-sm" [ngClass]="{'slide-menu': toggleNav}">
+        <ul class="menu-in" *ngIf="toggleNav" [ngClass]="{'show-delay': toggleNav}">
+            <li *ngFor="let menu of navbarMenu" (click)="closeMenu()" routerLink='{{menu.redirectTo}}'>
+                {{menu.value}}
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="content-container" [ngStyle]="{'top': currentActiveRoute=='/about-us' ? '20px' : '-126px'}">
     <div class="route-bg" *ngIf="currentActiveRoute && activeRoute[currentActiveRoute]">
         <img src="../assets/{{activeRoute[currentActiveRoute].image}}">
         <div class="route-content">
@@ -19,7 +31,7 @@
     </div>
     <router-outlet></router-outlet>
 
-    <!-- <footer>
+    <footer>
         <div class="bg-color marquee">
             <div class="quoatation-container bg-color">
                 <p style="margin: 0; font-size: 40px;">Affordable, Reliable & Competent designs that reflects your
@@ -41,16 +53,16 @@
             </div>
             <div class="footer-contact">
                 <h2 class="contact-heading text-color">CONTACT US</h2>
-                <p>C-11/110 &nbsp; Sector-3 Rohini Delhi-110085</p>
+                <p>405, Manglam Paradise Mall, Sector 3, Rohini, Delhi - 110085</p>
                 <p><span class="text-color" style="padding-right: 15px;">Phone:</span> +91-9873779876</p>
                 <p><span class="text-color" style="padding-right: 19px;">Email:</span> info@petalsartdecor.com</p>
                 <p><span class="text-color" style="padding-right: 30px;">Web:</span> www.petalsartdecor.com</p>
-                <p><span class="text-color" style="padding-right: 30px;">Open:</span> Monday - Sunday &nbsp; 09:30 -
-                    18:30</p>
+                <p><span class="text-color" style="padding-right: 22px;">Open:</span> Monday - Saturday &nbsp; 09:30 -
+                    19:30</p>
             </div>
         </div>
         <div class="copyright">
-            © Copyright 2020 - Petals Art Decor, <span class="text-color"> Interior Design Firm</span>
+            © Copyright 2022 - Petals Art Decor, <span class="text-color"> Interior Design Firm</span>
             <div class="social-icons">
 
                 <a href="https://www.facebook.com/petalsartdecor/" target="_blank">
@@ -70,7 +82,7 @@
                 src="https://seal.godaddy.com/getSeal?sealID=YitqlDa5AshbwEYPA0v4w50IJyrviRnJW8s0MV4xOdmBcNGUuhcKq15xOBEM">
                 </script>
         </span>
-    </footer> -->
+    </footer>
     <div class="back-to-top bg-color" #goToTop (click)="scrollTop($event)">
         <a>
             <i class="fa fa-angle-up fa-lg"></i>

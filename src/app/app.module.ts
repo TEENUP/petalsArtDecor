@@ -30,7 +30,7 @@ import {MatSelectModule} from '@angular/material/select';
     ServicesComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
