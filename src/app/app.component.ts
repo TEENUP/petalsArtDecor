@@ -49,22 +49,22 @@ export class AppComponent {
   scrollAmount = 5;
 
   constructor(private router: Router) {
-    console.log(window.navigator);
+    // console.log(window.navigator);
   }
 
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentActiveRoute = event.url;
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
       }
     });
 
-    this.activeRoute['/about-us'].image = window.screen.width < 500 ? 'portfolio/res3/res3.1.jpg' : '10.jpg';
+    // this.activeRoute['/about-us'].image = window.screen.width < 500 ? 'portfolio/res3/res3.1.jpg' : '10.jpg';
   }
 
   scrollTop(event) {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
 
   toggle() {

@@ -33,7 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
     ProjectsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
