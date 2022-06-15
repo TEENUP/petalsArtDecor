@@ -1,5 +1,5 @@
 import { Component, ViewChild, ViewChildren } from "@angular/core";
-import { NgImageSliderComponent } from 'ng-image-slider';
+// import { NgImageSliderComponent } from 'ng-image-slider';
 import { PORTFOLIO, TAG } from './project.constant';
 import { ActivatedRoute } from '@angular/router';
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
@@ -113,7 +113,7 @@ export class ProjectsComponent {
     filterPortFolioCount = -1;
 
     @ViewChild('portfolio')
-    slider: NgImageSliderComponent;
+    // slider: NgImageSliderComponent;
     sliderImages: Array<object> = [];
 
     tag = TAG;
@@ -156,8 +156,8 @@ export class ProjectsComponent {
     enlarge(slider) {
         console.log(slider);
         this.sliderImages = slider;
-        this.slider['elRef'].nativeElement.style.display = 'block'
-        this.slider.ligthboxShow = true;
+        // this.slider['elRef'].nativeElement.style.display = 'block'
+        // this.slider.ligthboxShow = true;
     }
 
     filterProjects(type) {
@@ -175,8 +175,8 @@ export class ProjectsComponent {
     }
 
     imageSliderClose() {
-        this.slider['elRef'].nativeElement.style.display = 'none'
-        this.slider.ligthboxShow = false;
+        // this.slider['elRef'].nativeElement.style.display = 'none'
+        // this.slider.ligthboxShow = false;
     }
 
     setImageSlideCount() {
